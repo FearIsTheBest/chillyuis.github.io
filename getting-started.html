@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Getting Started - Chilly's Interfaces</title>
+</head>
+<body>
+    <main class="doc">
+        <a class="doc-back" href="help.html">&larr; Back to Help</a>
+
+        <h1 class="fade-in">Getting Started</h1>
+        <p class="doc-lead fade-in fade-in-delay-1">
+            This guide walks you through installing and running Synapse from scratch.
+            The whole process takes about a minute.
+        </p>
+
+        <h2>Prerequisites</h2>
+        <ul class="doc-list">
+            <li><strong>Windows 10 or 11 (64-bit).</strong> Synapse is Windows-only and does not run on Mac or Linux.</li>
+            <li><strong>An internet connection.</strong> The bootstrapper downloads the latest files each time a new version is released.</li>
+            <li><strong>A dedicated folder.</strong> Synapse installs into the folder you run it from, so give it its own empty folder (for example <code>C:\Synapse</code>) rather than running it straight from your Downloads.</li>
+            <li><strong>No .NET install needed.</strong> The bootstrapper is a single self-contained <code>.exe</code> &mdash; there is nothing else to install first.</li>
+        </ul>
+
+        <h2 id="install">Installation</h2>
+
+        <h3>1. Download the bootstrapper</h3>
+        <p>Head to the <a href="index.html">home page</a> and click <strong>Download</strong>. This gives you a single file, <code>Synapse Bootstrapper.exe</code>.</p>
+
+        <h3>2. Put it in its own folder</h3>
+        <p>Create a folder where you want Synapse to live (such as <code>C:\Synapse</code>) and move the downloaded <code>.exe</code> into it. When you run the bootstrapper it creates several sub-folders next to itself, so keeping it in a dedicated folder keeps everything tidy.</p>
+        <figure class="doc-figure">
+            <img src="images/gs-folder.png" alt="Synapse Bootstrapper.exe placed in its own folder" />
+            <figcaption>The bootstrapper in its own empty folder, ready to run.</figcaption>
+        </figure>
+
+        <h3>3. Run it (and get past SmartScreen)</h3>
+        <p>Double-click <code>Synapse Bootstrapper.exe</code>. Because the app is newly published, Windows may show a blue <em>&ldquo;Windows protected your PC&rdquo;</em> screen. This is expected &mdash; click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+        <figure class="doc-figure">
+            <img src="images/gs-smartscreen.png" alt="Windows SmartScreen prompt with Run anyway button" />
+            <figcaption>Click &ldquo;More info&rdquo; &rarr; &ldquo;Run anyway&rdquo; if you see this SmartScreen prompt.</figcaption>
+        </figure>
+
+        <h3>4. Confirm the first-time install</h3>
+        <p>The first time you run it, Synapse detects it hasn't been set up yet and asks to install into the current folder. Click <strong>Yes</strong> to continue.</p>
+        <figure class="doc-figure">
+            <img src="images/gs-install-prompt.png" alt="Synapse X Installation prompt with Yes and No buttons" />
+            <figcaption>The first-run install prompt. Click &ldquo;Yes&rdquo; to set up.</figcaption>
+        </figure>
+
+        <h3>5. Let it download and launch</h3>
+        <p>The bootstrapper creates its folders, downloads the latest files, and shows a progress bar as it works. When it reaches 100% it launches Synapse automatically &mdash; no extra clicks needed.</p>
+        <figure class="doc-figure">
+            <img src="images/gs-downloading.png" alt="Bootstrapper progress bar downloading files" />
+            <figcaption>The bootstrapper downloading the latest version before launch.</figcaption>
+        </figure>
+
+        <h2>Everyday use &amp; updates</h2>
+        <p>After the first install, just run <code>Synapse Bootstrapper.exe</code> whenever you want to open Synapse. On each launch it checks for a new version:</p>
+        <ul class="doc-list">
+            <li><strong>Up to date?</strong> It launches Synapse straight away.</li>
+            <li><strong>New version available?</strong> It downloads the update automatically, then launches. You never have to reinstall by hand.</li>
+        </ul>
+        <p>Tip: right-click the bootstrapper and choose <em>Send to &rarr; Desktop (create shortcut)</em> so it's one click to open from then on.</p>
+
+        <h2 id="troubleshooting">Troubleshooting</h2>
+
+        <h3>&ldquo;Download Failure&rdquo; error</h3>
+        <p>If you see a <em>Download Failure</em> screen, the bootstrapper couldn't reach the download servers. This is almost always caused by antivirus or firewall software blocking it. Try the following:</p>
+        <ul class="doc-list">
+            <li>Add an exclusion for the Synapse folder in your antivirus (including Windows Security &rarr; Virus &amp; threat protection &rarr; Exclusions).</li>
+            <li>Temporarily disable your VPN or firewall and try again.</li>
+            <li>Make sure you have a working internet connection.</li>
+        </ul>
+        <figure class="doc-figure">
+            <img src="images/gs-error.png" alt="Download Failure error screen" />
+            <figcaption>The Download Failure screen &mdash; usually an antivirus or firewall block.</figcaption>
+        </figure>
+
+        <h3>Still stuck?</h3>
+        <p>Join our Discord and ask in the support channel &mdash; we're happy to help.</p>
+
+        <div class="hero-buttons doc-buttons">
+            <button class="modern-button" onclick="window.location.href='help.html'">Back to Help</button>
+            <button class="modern-button" onclick="window.location.href='https://discord.gg/9NPqhbEJk'">Discord</button>
+        </div>
+    </main>
+
+    <script>
+    // Until a real screenshot is added, show a tidy placeholder instead of a broken image.
+    function swapForPlaceholder(img) {
+        var box = document.createElement('div');
+        box.className = 'doc-placeholder';
+        box.textContent = 'Screenshot coming soon';
+        img.replaceWith(box);
+    }
+    document.querySelectorAll('.doc-figure img').forEach(function (img) {
+        img.addEventListener('error', function () { swapForPlaceholder(img); });
+        // Catch images that already failed before this script ran.
+        if (img.complete && img.naturalWidth === 0) {
+            swapForPlaceholder(img);
+        }
+    });
+    </script>
+</body>
+</html>
