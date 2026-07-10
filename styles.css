@@ -40,7 +40,7 @@ body {
 }
 
 .help h1 {
-  font-size: 4rem;
+  font-size: clamp(2.4rem, 10vw, 4rem);
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -52,16 +52,21 @@ body {
 }
 
 .help .features-grid {
+  width: 100%;
+  max-width: 900px;
   margin-bottom: 40px;
 }
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 9px;
+  width: 100%;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: clamp(2.6rem, 12vw, 5rem);
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -75,6 +80,7 @@ body {
 .modern-button {
   display: inline-block;
   width: 220px;
+  max-width: 100%;
   padding: 12px 0;
   border: none;
   border-radius: 3px;
@@ -85,7 +91,6 @@ body {
   font-family: inherit;
   text-align: center;
   font-size: 1.0rem;
-  margin-right: 10px;
   outline: 1px solid #454545;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: background-color 0.2s ease, transform 0.15s ease;
