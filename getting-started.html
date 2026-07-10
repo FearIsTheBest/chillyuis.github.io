@@ -36,21 +36,15 @@
             <figcaption>The bootstrapper in its own empty folder, ready to run.</figcaption>
         </figure>
 
-        <h3>3. Run it (and get past SmartScreen)</h3>
-        <p>Double-click <code>Synapse Bootstrapper.exe</code>. Because the app is newly published, Windows may show a blue <em>&ldquo;Windows protected your PC&rdquo;</em> screen. This is expected &mdash; click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
-        <figure class="doc-figure">
-            <img src="images/gs-smartscreen.png" alt="Windows SmartScreen prompt with Run anyway button" />
-            <figcaption>Click &ldquo;More info&rdquo; &rarr; &ldquo;Run anyway&rdquo; if you see this SmartScreen prompt.</figcaption>
-        </figure>
-
-        <h3>4. Confirm the first-time install</h3>
-        <p>The first time you run it, Synapse detects it hasn't been set up yet and asks to install into the current folder. Click <strong>Yes</strong> to continue.</p>
+        <h3>3. Run it and confirm the install</h3>
+        <p>Double-click <code>Synapse Bootstrapper.exe</code>. The first time you run it, Synapse detects it hasn't been set up yet and asks to install into the current folder. Click <strong>Yes</strong> to continue.</p>
+        <p class="doc-note">If Windows shows a <em>&ldquo;Windows protected your PC&rdquo;</em> prompt, click <strong>More info</strong> then <strong>Run anyway</strong>. You may not see it at all.</p>
         <figure class="doc-figure">
             <img src="images/gs-install-prompt.png" alt="Synapse X Installation prompt with Yes and No buttons" />
             <figcaption>The first-run install prompt. Click &ldquo;Yes&rdquo; to set up.</figcaption>
         </figure>
 
-        <h3>5. Let it download and launch</h3>
+        <h3>4. Let it download and launch</h3>
         <p>The bootstrapper creates its folders, downloads the latest files, and shows a progress bar as it works. When it reaches 100% it launches Synapse automatically &mdash; no extra clicks needed.</p>
         <figure class="doc-figure">
             <img src="images/gs-downloading.png" alt="Bootstrapper progress bar downloading files" />
@@ -68,15 +62,15 @@
         <h2 id="troubleshooting">Troubleshooting</h2>
 
         <h3>&ldquo;Download Failure&rdquo; error</h3>
-        <p>If you see a <em>Download Failure</em> screen, the bootstrapper couldn't reach the download servers. This is almost always caused by antivirus or firewall software blocking it. Try the following:</p>
+        <p>A <em>Download Failure</em> screen means something went wrong while downloading or starting Synapse. This is almost always caused by antivirus or firewall software &mdash; either blocking the download, or deleting the downloaded file before it can launch. If the message mentions it couldn't start a process such as <code>bin\...exe</code>, that's antivirus removing the file. Try the following:</p>
         <ul class="doc-list">
-            <li>Add an exclusion for the Synapse folder in your antivirus (including Windows Security &rarr; Virus &amp; threat protection &rarr; Exclusions).</li>
+            <li>Add an exclusion for the whole Synapse folder in your antivirus &mdash; including Windows Security &rarr; Virus &amp; threat protection &rarr; Exclusions &mdash; then run the bootstrapper again.</li>
             <li>Temporarily disable your VPN or firewall and try again.</li>
             <li>Make sure you have a working internet connection.</li>
         </ul>
         <figure class="doc-figure">
             <img src="images/gs-error.png" alt="Download Failure error screen" />
-            <figcaption>The Download Failure screen &mdash; usually an antivirus or firewall block.</figcaption>
+            <figcaption>A Download Failure &mdash; here antivirus removed the downloaded file, so it couldn't start.</figcaption>
         </figure>
 
         <h3>Still stuck?</h3>
