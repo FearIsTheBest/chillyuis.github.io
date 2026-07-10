@@ -21,7 +21,7 @@
             <li><strong>Windows 10 or 11 (64-bit).</strong> Synapse is Windows-only and does not run on Mac or Linux.</li>
             <li><strong>An internet connection.</strong> The bootstrapper downloads the latest files each time a new version is released.</li>
             <li><strong>A dedicated folder.</strong> Synapse installs into the folder you run it from, so give it its own empty folder (for example <code>C:\Synapse</code>) rather than running it straight from your Downloads.</li>
-            <li><strong>No .NET install needed.</strong> The bootstrapper is a single self-contained <code>.exe</code> &mdash; there is nothing else to install first.</li>
+            <li><strong>No .NET install needed.</strong> The bootstrapper is a single self-contained <code>.exe</code>, so there is nothing else to install first.</li>
         </ul>
 
         <h2 id="install">Installation</h2>
@@ -45,7 +45,7 @@
         </figure>
 
         <h3>4. Let it download and launch</h3>
-        <p>The bootstrapper creates its folders, downloads the latest files, and shows a progress bar as it works. When it reaches 100% it launches Synapse automatically &mdash; no extra clicks needed.</p>
+        <p>The bootstrapper creates its folders, downloads the latest files, and shows a progress bar as it works. When it reaches 100% it launches Synapse automatically, with no extra clicks needed.</p>
         <figure class="doc-figure">
             <img src="images/gs-downloading.png" alt="Bootstrapper progress bar downloading files" />
             <figcaption>The bootstrapper downloading the latest version before launch.</figcaption>
@@ -62,19 +62,19 @@
         <h2 id="troubleshooting">Troubleshooting</h2>
 
         <h3>&ldquo;Download Failure&rdquo; error</h3>
-        <p>A <em>Download Failure</em> screen means something went wrong while downloading or starting Synapse. This is almost always caused by antivirus or firewall software &mdash; either blocking the download, or deleting the downloaded file before it can launch. If the message mentions it couldn't start a process such as <code>bin\...exe</code>, that's antivirus removing the file. Try the following:</p>
+        <p>A <em>Download Failure</em> screen means something went wrong while downloading or starting Synapse. This is almost always caused by antivirus or firewall software, either blocking the download or deleting the downloaded file before it can launch. If the message mentions it couldn't start a process such as <code>bin\...exe</code>, that's antivirus removing the file. Try the following:</p>
         <ul class="doc-list">
-            <li>Add an exclusion for the whole Synapse folder in your antivirus &mdash; including Windows Security &rarr; Virus &amp; threat protection &rarr; Exclusions &mdash; then run the bootstrapper again.</li>
+            <li>Add an exclusion for the whole Synapse folder in your antivirus (including Windows Security &rarr; Virus &amp; threat protection &rarr; Exclusions), then run the bootstrapper again.</li>
             <li>Temporarily disable your VPN or firewall and try again.</li>
             <li>Make sure you have a working internet connection.</li>
         </ul>
         <figure class="doc-figure">
             <img src="images/gs-error.png" alt="Download Failure error screen" />
-            <figcaption>A Download Failure &mdash; here antivirus removed the downloaded file, so it couldn't start.</figcaption>
+            <figcaption>A Download Failure: here antivirus removed the downloaded file, so it couldn't start.</figcaption>
         </figure>
 
         <h3>Still stuck?</h3>
-        <p>Join our Discord and ask in the support channel &mdash; we're happy to help.</p>
+        <p>Join our Discord and ask in the support channel. We're happy to help.</p>
 
         <div class="hero-buttons doc-buttons">
             <button class="modern-button" onclick="window.location.href='help.html'">Back to Help</button>
