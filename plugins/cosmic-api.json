@@ -2,7 +2,7 @@
   "id": "cosmic-api",
   "name": "Cosmic API",
   "version": "1.0.0",
-  "author": "Cosmic",
+  "author": "Chilly",
   "category": "Executors",
   "icon": "fluent:rocket-20-filled",
   "description": "Windows Roblox executor backend. When enabled, the Attach button injects via Cosmic and scripts execute through it.",
